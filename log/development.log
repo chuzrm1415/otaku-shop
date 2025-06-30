@@ -1,0 +1,87 @@
+Started GET "/" for 127.0.0.1 at 2025-06-29 12:25:01 -0600
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/casthir/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/casthir/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.7ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-06-30 01:14:30.496233', '2025-06-30 01:14:30.496235') RETURNING "key" /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to CreateProducts (20250630010636)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar NOT NULL, "product_price" decimal(10,2) NOT NULL, "product_description" varchar NOT NULL, "product_stock" integer NOT NULL, "product_tax_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_192e631d88"
+FOREIGN KEY ("product_tax_id")
+  REFERENCES "product_taxes" ("id")
+) /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_products_on_product_tax_id" ON "products" ("product_tax_id") /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630010636') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to CreateProductTaxes (20250630042018)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "product_taxes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tax_name" varchar, "tax_value" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042018') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to CreateStockHistories (20250630042130)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "stock_histories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "sh_product" varchar, "sh_move_type" varchar, "sh_cant" integer, "sh_date" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042130') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to CreateMoveTypes (20250630042203)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "move_types" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mt_name" varchar, "mt_description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042203') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to CreateBills (20250630042218)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "bills" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bill_client" varchar, "bill_date" datetime(6), "bill_subtotal" decimal, "bill_total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042218') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to CreateBillLines (20250630042233)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "bill_lines" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bl_bill" varchar, "bl_product" varchar, "bl_cant" integer, "bl_total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042233') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to CreateClients (20250630042243)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "client_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630042243') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to DeleteFirstForeignKey (20250630045341)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar NOT NULL, "product_price" decimal(10,2) NOT NULL, "product_description" varchar NOT NULL, "product_stock" integer NOT NULL, "product_tax_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aproducts_on_product_tax_id" ON "aproducts" ("product_tax_id") /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","product_name","product_price","product_description","product_stock","product_tax_id","created_at","updated_at")
+                     SELECT "id","product_name","product_price","product_description","product_stock","product_tax_id","created_at","updated_at" FROM "products" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar NOT NULL, "product_price" decimal(10,2) NOT NULL, "product_description" varchar NOT NULL, "product_stock" integer NOT NULL, "product_tax_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_products_on_product_tax_id" ON "products" ("product_tax_id") /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("id","product_name","product_price","product_description","product_stock","product_tax_id","created_at","updated_at")
+                     SELECT "id","product_name","product_price","product_description","product_stock","product_tax_id","created_at","updated_at" FROM "aproducts" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630045341') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
