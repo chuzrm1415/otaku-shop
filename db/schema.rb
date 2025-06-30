@@ -10,62 +10,75 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_30_045341) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_30_210720) do
   create_table "bill_lines", force: :cascade do |t|
-    t.string "bl_bill"
-    t.string "bl_product"
-    t.integer "bl_cant"
-    t.decimal "bl_total"
+    t.integer "bill"
+    t.integer "product"
+    t.integer "cant"
+    t.decimal "total", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bills", force: :cascade do |t|
-    t.string "bill_client"
-    t.datetime "bill_date"
-    t.decimal "bill_subtotal"
-    t.decimal "bill_total"
+    t.integer "client"
+    t.datetime "date"
+    t.decimal "subtotal", precision: 10, scale: 2
+    t.decimal "total", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "clients", force: :cascade do |t|
-    t.string "client_name"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "move_types", force: :cascade do |t|
-    t.string "mt_name"
-    t.string "mt_description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "product_taxes", force: :cascade do |t|
-    t.string "tax_name"
-    t.decimal "tax_value"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "product_name", null: false
-    t.decimal "product_price", precision: 10, scale: 2, null: false
-    t.string "product_description", null: false
-    t.integer "product_stock", null: false
-    t.integer "product_tax_id", null: false
+    t.string "name"
+    t.decimal "price", precision: 10, scale: 2
+    t.string "description"
+    t.integer "stock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_tax_id"], name: "index_products_on_product_tax_id"
   end
 
   create_table "stock_histories", force: :cascade do |t|
-    t.string "sh_product"
-    t.string "sh_move_type"
-    t.integer "sh_cant"
-    t.datetime "sh_date"
+    t.integer "product"
+    t.integer "move_type"
+    t.integer "cant"
+    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "tax_products", force: :cascade do |t|
+    t.integer "product"
+    t.integer "tax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "taxes", force: :cascade do |t|
+    t.string "name"
+    t.decimal "value", precision: 10, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bill_lines", "bills", column: "bill"
+  add_foreign_key "bill_lines", "products", column: "product"
+  add_foreign_key "bills", "clients", column: "client"
+  add_foreign_key "stock_histories", "move_types", column: "move_type"
+  add_foreign_key "stock_histories", "products", column: "product"
+  add_foreign_key "tax_products", "products", column: "product"
+  add_foreign_key "tax_products", "taxes", column: "tax"
 end
