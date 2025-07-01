@@ -1,0 +1,68 @@
+/* Centrar el formulario y darle un fondo suave */
+form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px 32px;
+  background: #f7f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Estilo para los títulos */
+h1 {
+  text-align: center;
+  color: #2d2d4d;
+  margin-bottom: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Espaciado entre campos */
+form > div {
+  margin-bottom: 18px;
+}
+
+/* Etiquetas */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Inputs y textarea */
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1em;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Botón de enviar */
+form input[type="submit"] {
+  width: 100%;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form input[type="submit"]:hover {
+  background: #5548c8;
+}

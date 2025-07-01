@@ -305,3 +305,689 @@ FOREIGN KEY ("client")
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630210720') RETURNING "version" /*application='OtakuShop'*/[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 17:33:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 8.4ms | ActiveRecord: 0.7ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-06-30 17:33:12 -0600
+Started GET "/assets/application-d8a8613a.js" for 127.0.0.1 at 2025-06-30 17:33:12 -0600
+Started POST "/products" for 127.0.0.1 at 2025-06-30 17:34:05 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "product" => {"name" => "Camiseta Dragon Ball M", "price" => "5000", "description" => "Camiseta de dragon ball negra de hombre talla M", "stock" => "20"}, "commit" => "Guardar Producto"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "stock", "created_at", "updated_at") VALUES ('Camiseta Dragon Ball M', 5000.0, 'Camiseta de dragon ball negra de hombre talla M', 20, '2025-06-30 23:34:05.843800', '2025-06-30 23:34:05.843800') RETURNING "id" /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 17:34:05 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'nombre' for an instance of Product)
+Caused by: NoMethodError (undefined method 'nombre' for an instance of Product)
+
+Information for: ActionView::Template::Error (undefined method 'nombre' for an instance of Product):
+    1: <h1><%= @producto.nombre %></h1>
+    2: <p>Precio: <%= @producto.precio %></p>
+    3: <p>Stock: <%= @producto.stock %></p>
+  
+app/views/products/show.html.erb:1
+
+Information for cause: NoMethodError (undefined method 'nombre' for an instance of Product):
+  
+app/views/products/show.html.erb:1
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 17:34:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 17:34:59 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.7ms)
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 0.6ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2025-06-30 17:35:32 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "product" => {"name" => "Camiseta", "price" => "5000", "description" => "Camiseta dragon ball negra hombre talla M", "stock" => "20"}, "commit" => "Guardar Producto"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "stock", "created_at", "updated_at") VALUES ('Camiseta', 5000.0, 'Camiseta dragon ball negra hombre talla M', 20, '2025-06-30 23:35:32.938608', '2025-06-30 23:35:32.938608') RETURNING "id" /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:9:in 'ProductsController#create'
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 17:35:32 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'name' for nil)
+Caused by: NoMethodError (undefined method 'name' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'name' for nil):
+    1: <h1><%= @product.name %></h1>
+    2: <p>Precio: <%= @product.price %></p>
+    3: <p>Descripción: <%= @product.description %></p>
+    4: <p>Stock: <%= @product.stock %></p>
+  
+app/views/products/show.html.erb:1
+
+Information for cause: NoMethodError (undefined method 'name' for nil):
+  
+app/views/products/show.html.erb:1
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 17:35:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products/show" for 127.0.0.1 at 2025-06-30 17:38:16 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "show"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = NULL LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=show):
+  
+app/controllers/products_controller.rb:17:in 'ProductsController#show'
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 17:38:38 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.2ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 1.1ms)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 19:18:48 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 5.9ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-06-30 19:18:48 -0600
+Started GET "/products/show/2" for 127.0.0.1 at 2025-06-30 19:18:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/products/show/2"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 19:18:56 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 19:24:52 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method 'name' for nil)
+Caused by: NoMethodError (undefined method 'name' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'name' for nil):
+    1: <h1><%= @product.name %></h1>
+    2: <p>Precio: <%= @product.price %></p>
+    3: <p>Descripción: <%= @product.description %></p>
+    4: <p>Stock: <%= @product.stock %></p>
+  
+app/views/products/show.html.erb:1
+
+Information for cause: NoMethodError (undefined method 'name' for nil):
+  
+app/views/products/show.html.erb:1
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 19:28:27 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 4.9ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2025-06-30 20:40:40 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 20:40:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 20:41:04 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 3.7ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 3.5ms)
+Completed 200 OK in 36ms (Views: 8.2ms | ActiveRecord: 1.3ms (0 queries, 0 cached) | GC: 13.2ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-06-30 20:41:04 -0600
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 20:41:12 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.5ms)
+Completed 200 OK in 14ms (Views: 2.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 4.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 20:41:16 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 20:41:25 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 20:48:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.3ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/assets/create_product-d671cf52.css" for 127.0.0.1 at 2025-06-30 20:48:34 -0600
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-06-30 20:48:34 -0600
+Started GET "/assets/application-d8a8613a.js" for 127.0.0.1 at 2025-06-30 20:48:34 -0600
+Started GET "/" for 127.0.0.1 at 2025-06-30 20:55:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/casthir/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/casthir/.asdf/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 20:55:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 20:59:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 20:59:26 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 2.6ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 21:33:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 21:33:12 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 2.6ms | ActiveRecord: 0.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/index" for 127.0.0.1 at 2025-06-30 21:33:19 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "index"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = NULL LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+Completed 404 Not Found in 15ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=index):
+  
+app/controllers/products_controller.rb:17:in 'ProductsController#show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 21:33:19 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-06-30 21:35:36 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 21:36:51 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 21:36:55 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-06-30 21:37:02 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-06-30 21:37:04 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-06-30 21:38:54 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 8.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 21:38:58 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 21:39:01 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:39:12 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 21:39:20 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 21:48:01 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/product_create-d671cf52.css" for 127.0.0.1 at 2025-06-30 21:48:01 -0600
+Started GET "/assets/product_index-54e4e441.css" for 127.0.0.1 at 2025-06-30 21:48:01 -0600
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:48:11 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 21:48:20 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:51:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 8.5ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/product_show-514c852a.css" for 127.0.0.1 at 2025-06-30 21:51:45 -0600
+Started GET "/" for 127.0.0.1 at 2025-06-30 21:51:51 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 21:51:53 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:52:00 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 21:52:02 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 21:52:17 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 21:52:26 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:56:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 8.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2025-06-30 21:56:57 -0600
+Processing by ProductsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:31:in 'ProductsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 4.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2025-06-30 21:57:26 -0600
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "product" => {"name" => "Camiseta anime", "price" => "5500.0", "description" => "Camiseta de dragon ball negra de hombre talla M", "stock" => "15"}, "commit" => "Actualizar Producto", "id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='update',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:35:in 'ProductsController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:36:in 'ProductsController#update'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "name" = 'Camiseta anime', "price" = 5500.0, "stock" = 15, "updated_at" = '2025-07-01 03:57:26.164971' WHERE "products"."id" = 1 /*action='update',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:36:in 'ProductsController#update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:36:in 'ProductsController#update'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 21:57:26 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 21:57:50 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 21:57:53 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-06-30 21:57:56 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2025-06-30 22:00:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 8.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/product_show-e98c807b.css" for 127.0.0.1 at 2025-06-30 22:00:25 -0600
+Started GET "/products/1" for 127.0.0.1 at 2025-06-30 22:00:27 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 2.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-06-30 22:00:34 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-06-30 22:00:48 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 22:00:58 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

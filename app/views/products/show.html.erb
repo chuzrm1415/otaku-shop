@@ -1,0 +1,9 @@
+<div class="product-detail-container">
+  <h1><%= @product.name %></h1>
+  <p>Precio: <%= @product.price %></p>
+  <p>Descripción: <%= @product.description %></p>
+  <p>Stock: <%= @product.stock %></p>
+
+  <%= link_to "Volver", products_path, class: "volver-btn" %>
+</div>
+

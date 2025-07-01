@@ -1,0 +1,16 @@
+<h1>Productos</h1>
+
+<%= link_to 'Agregar Producto', new_product_path, class: 'agregar-producto-btn' %>
+
+<ul class="product-list">
+  <% @products.each do |product| %>
+    <li>
+      <span><%= link_to product.name, product_path(product) %></span>
+      <span class="product-actions">
+        <%= link_to 'Editar', edit_product_path(product) %>
+        |
+        <%= link_to 'Eliminar', product_path(product), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'eliminar' %>
+      </span>
+    </li>
+  <% end %>
+</ul>

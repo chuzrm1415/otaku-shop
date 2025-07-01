@@ -1,0 +1,42 @@
+/* Detalle del producto */
+.product-detail-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 28px 36px;
+  background: #f7f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.product-detail-container h1 {
+  text-align: center;
+  color: #6c63ff;
+  margin-bottom: 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.product-detail-container p {
+  font-size: 1.08em;
+  margin: 14px 0;
+  color: #333;
+}
+
+.product-detail-container .volver-btn {
+  display: block;
+  width: 100%;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.05em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 28px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.product-detail-container .volver-btn:hover {
+  background: #c0392b;
+}
