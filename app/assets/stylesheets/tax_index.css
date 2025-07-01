@@ -1,0 +1,60 @@
+/* Título centrado */
+h1 {
+  text-align: center;
+  color: #6c63ff;
+  margin-top: 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Botón de agregar impuesto */
+.agregar-impuesto-btn {
+  display: block;
+  margin: 24px auto 32px auto;
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.agregar-impuesto-btn:hover {
+  background: #5548c8;
+}
+
+/* Lista de impuestos */
+.tax-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.tax-list li {
+  background: #f7f7fa;
+  margin-bottom: 18px;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Enlaces de acciones */
+.tax-actions a {
+  margin-left: 12px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.tax-actions a:hover {
+  color: #5548c8;
+}

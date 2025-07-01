@@ -1,4 +1,8 @@
 class TaxesController < ApplicationController
+  def index
+    @taxes = Tax.all
+  end
+
   def new
     @tax = Tax.new
   end
@@ -23,6 +27,10 @@ class TaxesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @tax = Tax.find(params[:id])
   end
 
   private

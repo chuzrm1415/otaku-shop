@@ -991,3 +991,1551 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:17:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/assets/product_create-d671cf52.css" for 127.0.0.1 at 2025-06-30 23:17:15 -0600
+Started GET "/assets/product_index-54e4e441.css" for 127.0.0.1 at 2025-06-30 23:17:15 -0600
+Started GET "/assets/product_show-e98c807b.css" for 127.0.0.1 at 2025-06-30 23:17:15 -0600
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:17:21 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'each' for nil)
+Caused by: NoMethodError (undefined method 'each' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'each' for nil):
+    3: <%= link_to 'Agregar Impuesto', new_tax_path, class: 'agregar-impuesto-btn' %>
+    4: 
+    5: <ul class="tax-list">
+    6:   <% @taxes.each do |tax| %>
+    7:     <li>
+    8:       <span><%= tax.name %> - <%= tax.percentage %>%</span>
+    9:       <span class="tax-actions">
+  
+app/views/taxes/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method 'each' for nil):
+  
+app/views/taxes/index.html.erb:6
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:17:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:18:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:18:22 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'each' for nil)
+Caused by: NoMethodError (undefined method 'each' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'each' for nil):
+    3: <%= link_to 'Agregar Impuesto', new_tax_path, class: 'agregar-impuesto-btn' %>
+    4: 
+    5: <ul class="tax-list">
+    6:   <% @taxes.each do |tax| %>
+    7:     <li>
+    8:       <span><%= tax.name %> - <%= tax.percentage %>%</span>
+    9:       <span class="tax-actions">
+  
+app/views/taxes/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method 'each' for nil):
+  
+app/views/taxes/index.html.erb:6
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:18:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:19:37 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:19:39 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.5ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-06-30 23:19:43 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 9.2ms | GC: 3.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 3.6ms)
+Completed 200 OK in 22ms (Views: 10.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:19:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:19:50 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:22:35 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/tax_new-02d53d56.css" for 127.0.0.1 at 2025-06-30 23:22:36 -0600
+Started GET "/taxes/new" for 127.0.0.1 at 2025-06-30 23:22:37 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Nuevo Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :percentage, "Porcentaje (%)" %>
+    <%= form.number_field :percentage, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Guardar Impuesto" %>
+<% end
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/new.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/new.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Nuevo Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :percentage, "Porcentaje (%)" %>
+    <%= form.number_field :percentage, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Guardar Impuesto" %>
+<% end
+):
+1:    <h1>Nuevo Impuesto</h1>
+2:    
+3:    <%= form_with model: @tax, local: true do |form| %>
+4:      <div>
+5:        <%= form.label :name, "Nombre" %>
+6:        <%= form.text_field :name %>
+7:      </div>
+8:    
+9:      <div>
+10:        <%= form.label :percentage, "Porcentaje (%)" %>
+11:        <%= form.number_field :percentage, step: 0.01 %>
+12:      </div>
+13:    
+14:      <%= form.submit "Guardar Impuesto" %>
+15:    <% end
+  
+app/views/taxes/new.html.erb:17: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/new.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/new.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+):
+  
+app/views/taxes/new.html.erb:17: syntax errors found
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:22:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-06-30 23:22:52 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:22:55 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:23:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:23:04 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:23:04 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 1.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/new" for 127.0.0.1 at 2025-06-30 23:23:05 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Nuevo Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :percentage, "Porcentaje (%)" %>
+    <%= form.number_field :percentage, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Guardar Impuesto" %>
+<% end
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/new.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/new.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Nuevo Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :percentage, "Porcentaje (%)" %>
+    <%= form.number_field :percentage, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Guardar Impuesto" %>
+<% end
+):
+1:    <h1>Nuevo Impuesto</h1>
+2:    
+3:    <%= form_with model: @tax, local: true do |form| %>
+4:      <div>
+5:        <%= form.label :name, "Nombre" %>
+6:        <%= form.text_field :name %>
+7:      </div>
+8:    
+9:      <div>
+10:        <%= form.label :percentage, "Porcentaje (%)" %>
+11:        <%= form.number_field :percentage, step: 0.01 %>
+12:      </div>
+13:    
+14:      <%= form.submit "Guardar Impuesto" %>
+15:    <% end
+  
+app/views/taxes/new.html.erb:17: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/new.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/new.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+):
+  
+app/views/taxes/new.html.erb:17: syntax errors found
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:23:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/taxes/new" for 127.0.0.1 at 2025-06-30 23:23:38 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.6ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 0.5ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started POST "/taxes" for 127.0.0.1 at 2025-06-30 23:24:08 -0600
+Processing by TaxesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "percentage" => "13.0"}, "commit" => "Guardar Impuesto"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'percentage' for Tax.)
+Caused by: NoMethodError (undefined method 'percentage=' for an instance of Tax)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'percentage' for Tax.):
+  
+app/controllers/taxes_controller.rb:11:in 'TaxesController#create'
+
+Information for cause: NoMethodError (undefined method 'percentage=' for an instance of Tax):
+  
+app/controllers/taxes_controller.rb:11:in 'TaxesController#create'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:24:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/taxes" for 127.0.0.1 at 2025-06-30 23:24:43 -0600
+Processing by TaxesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "percentage" => "13.0"}, "commit" => "Guardar Impuesto"}
+[31mUnpermitted parameter: :percentage. Context: { controller: TaxesController, action: create, request: #<ActionDispatch::Request:0x0000738060f080d0>, params: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "percentage" => "13.0"}, "commit" => "Guardar Impuesto", "controller" => "taxes", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTax Create (0.6ms)[0m  [1m[32mINSERT INTO "taxes" ("name", "value", "created_at", "updated_at") VALUES ('I.V.A', NULL, '2025-07-01 05:24:43.195051', '2025-07-01 05:24:43.195051') RETURNING "id" /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+Redirected to http://localhost:3000/taxes/1
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:24:43 -0600
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for TaxesController):
+  
+actionpack (8.0.2) lib/abstract_controller/base.rb:158:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:24:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:26:25 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/tax_show-8cbaab63.css" for 127.0.0.1 at 2025-06-30 23:26:25 -0600
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:26:27 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.5ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'percentage' for an instance of Tax)
+Caused by: NoMethodError (undefined method 'percentage' for an instance of Tax)
+
+Information for: ActionView::Template::Error (undefined method 'percentage' for an instance of Tax):
+     5: <ul class="tax-list">
+     6:   <% @taxes.each do |tax| %>
+     7:     <li>
+     8:       <span><%= tax.name %> - <%= tax.percentage %>%</span>
+     9:       <span class="tax-actions">
+    10:         <%= link_to 'Editar', edit_tax_path(tax) %>
+    11:       </span>
+  
+app/views/taxes/index.html.erb:8
+app/views/taxes/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method 'percentage' for an instance of Tax):
+  
+app/views/taxes/index.html.erb:8
+app/views/taxes/index.html.erb:6
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:27:05 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'percentage' for an instance of Tax)
+Caused by: NoMethodError (undefined method 'percentage' for an instance of Tax)
+
+Information for: ActionView::Template::Error (undefined method 'percentage' for an instance of Tax):
+     5: <ul class="tax-list">
+     6:   <% @taxes.each do |tax| %>
+     7:     <li>
+     8:       <span><%= tax.name %> - <%= tax.percentage %>%</span>
+     9:       <span class="tax-actions">
+    10:         <%= link_to 'Editar', edit_tax_path(tax) %>
+    11:       </span>
+  
+app/views/taxes/index.html.erb:8
+app/views/taxes/index.html.erb:6
+
+Information for cause: NoMethodError (undefined method 'percentage' for an instance of Tax):
+  
+app/views/taxes/index.html.erb:8
+app/views/taxes/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:28:43 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:28:44 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.5ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:29:53 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/assets/tax_index-665443d9.css" for 127.0.0.1 at 2025-06-30 23:29:53 -0600
+Started GET "/assets/tax_show-ba31c313.css" for 127.0.0.1 at 2025-06-30 23:29:53 -0600
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:29:54 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:29:59 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+Completed 406 Not Acceptable in 9ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+  
+ActionController::MissingExactTemplate (TaxesController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in 'ActionController::ImplicitRender#default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in 'ActionController::BasicImplicitRender#send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in 'AbstractController::Base#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in 'ActionController::Rendering#process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in 'block in AbstractController::Callbacks#process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in 'block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'BasicObject#instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in 'AbstractController::Callbacks#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in 'ActionController::Rescue#process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/taxes/new" for 127.0.0.1 at 2025-06-30 23:30:25 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/taxes" for 127.0.0.1 at 2025-06-30 23:30:36 -0600
+Processing by TaxesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Exoneracion", "percentage" => "0.0"}, "commit" => "Guardar Impuesto"}
+[31mUnpermitted parameter: :percentage. Context: { controller: TaxesController, action: create, request: #<ActionDispatch::Request:0x0000738043d74c40>, params: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Exoneracion", "percentage" => "0.0"}, "commit" => "Guardar Impuesto", "controller" => "taxes", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTax Create (0.7ms)[0m  [1m[32mINSERT INTO "taxes" ("name", "value", "created_at", "updated_at") VALUES ('Exoneracion', NULL, '2025-07-01 05:30:36.015945', '2025-07-01 05:30:36.015945') RETURNING "id" /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+Redirected to http://localhost:3000/taxes/2
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/2" for 127.0.0.1 at 2025-06-30 23:30:36 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "2"}
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'name' for nil)
+Caused by: NoMethodError (undefined method 'name' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'name' for nil):
+    1: <div class="tax-detail-container">
+    2:   <h1><%= @tax.name %></h1>
+    3:   <p>Porcentaje: <%= @tax.value %>%</p>
+    4: 
+    5:   <%= link_to "Volver", taxes_path, class: "volver-btn" %>
+  
+app/views/taxes/show.html.erb:2
+
+Information for cause: NoMethodError (undefined method 'name' for nil):
+  
+app/views/taxes/show.html.erb:2
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:30:36 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:31:21 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/2/edit" for 127.0.0.1 at 2025-06-30 23:31:23 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+Completed 406 Not Acceptable in 6ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (TaxesController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in 'ActionController::ImplicitRender#default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in 'ActionController::BasicImplicitRender#send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in 'AbstractController::Base#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in 'ActionController::Rendering#process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in 'block in AbstractController::Callbacks#process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in 'block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'BasicObject#instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in 'AbstractController::Callbacks#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in 'ActionController::Rescue#process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:31:31 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::MissingExactTemplate (TaxesController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in 'ActionController::ImplicitRender#default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in 'ActionController::BasicImplicitRender#send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in 'AbstractController::Base#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in 'ActionController::Rendering#process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in 'block in AbstractController::Callbacks#process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in 'block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'BasicObject#instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in 'AbstractController::Callbacks#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in 'ActionController::Rescue#process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:31:39 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'name' for nil)
+Caused by: NoMethodError (undefined method 'name' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'name' for nil):
+    1: <div class="tax-detail-container">
+    2:   <h1><%= @tax.name %></h1>
+    3:   <p>Porcentaje: <%= @tax.value %>%</p>
+    4: 
+    5:   <%= link_to "Volver", taxes_path, class: "volver-btn" %>
+  
+app/views/taxes/show.html.erb:2
+
+Information for cause: NoMethodError (undefined method 'name' for nil):
+  
+app/views/taxes/show.html.erb:2
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:34:02 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 4.4ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 1.0ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/taxes/2/edit" for 127.0.0.1 at 2025-06-30 23:34:08 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionController::MissingExactTemplate (TaxesController#edit is missing a template for request formats: text/html):
+  
+actionpack (8.0.2) lib/action_controller/metal/implicit_render.rb:49:in 'ActionController::ImplicitRender#default_render'
+actionpack (8.0.2) lib/action_controller/metal/basic_implicit_render.rb:9:in 'ActionController::BasicImplicitRender#send_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:226:in 'AbstractController::Base#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rendering.rb:193:in 'ActionController::Rendering#process_action'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:261:in 'block in AbstractController::Callbacks#process_action'
+activesupport (8.0.2) lib/active_support/callbacks.rb:120:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.0.2) lib/action_text/rendering.rb:25:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.0.2) lib/action_text/engine.rb:71:in 'block (4 levels) in <class:Engine>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'BasicObject#instance_exec'
+activesupport (8.0.2) lib/active_support/callbacks.rb:129:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in 'AbstractController::Callbacks#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in 'ActionController::Rescue#process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/taxes/new" for 127.0.0.1 at 2025-06-30 23:34:11 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/taxes" for 127.0.0.1 at 2025-06-30 23:34:25 -0600
+Processing by TaxesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Comision", "percentage" => "0.05"}, "commit" => "Guardar Impuesto"}
+[31mUnpermitted parameter: :percentage. Context: { controller: TaxesController, action: create, request: #<ActionDispatch::Request:0x0000738043f530c0>, params: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Comision", "percentage" => "0.05"}, "commit" => "Guardar Impuesto", "controller" => "taxes", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTax Create (0.9ms)[0m  [1m[32mINSERT INTO "taxes" ("name", "value", "created_at", "updated_at") VALUES ('Comision', NULL, '2025-07-01 05:34:25.313670', '2025-07-01 05:34:25.313670') RETURNING "id" /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:12:in 'TaxesController#create'
+Redirected to http://localhost:3000/taxes/3
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/3" for 127.0.0.1 at 2025-06-30 23:34:25 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/2" for 127.0.0.1 at 2025-06-30 23:36:55 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:37:00 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:38:08 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.0ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-06-30 23:46:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/tax_edit-26ae433a.css" for 127.0.0.1 at 2025-06-30 23:46:55 -0600
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-06-30 23:46:55 -0600
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:46:56 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:47:01 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Editar Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Porcentaje (%)" %>
+    <%= form.number_field :value, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Actualizar Impuesto" %>
+<% end
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/edit.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/edit.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Editar Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Porcentaje (%)" %>
+    <%= form.number_field :value, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Actualizar Impuesto" %>
+<% end
+):
+1:    <h1>Editar Impuesto</h1>
+2:    
+3:    <%= form_with model: @tax, local: true do |form| %>
+4:      <div>
+5:        <%= form.label :name, "Nombre" %>
+6:        <%= form.text_field :name %>
+7:      </div>
+8:    
+9:      <div>
+10:        <%= form.label :value, "Porcentaje (%)" %>
+11:        <%= form.number_field :value, step: 0.01 %>
+12:      </div>
+13:    
+14:      <%= form.submit "Actualizar Impuesto" %>
+15:    <% end
+  
+app/views/taxes/edit.html.erb:17: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/edit.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/edit.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+):
+  
+app/views/taxes/edit.html.erb:17: syntax errors found
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-30 23:47:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:47:07 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Editar Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Porcentaje (%)" %>
+    <%= form.number_field :value, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Actualizar Impuesto" %>
+<% end
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/edit.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/edit.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Editar Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Porcentaje (%)" %>
+    <%= form.number_field :value, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Actualizar Impuesto" %>
+<% end
+):
+1:    <h1>Editar Impuesto</h1>
+2:    
+3:    <%= form_with model: @tax, local: true do |form| %>
+4:      <div>
+5:        <%= form.label :name, "Nombre" %>
+6:        <%= form.text_field :name %>
+7:      </div>
+8:    
+9:      <div>
+10:        <%= form.label :value, "Porcentaje (%)" %>
+11:        <%= form.number_field :value, step: 0.01 %>
+12:      </div>
+13:    
+14:      <%= form.submit "Actualizar Impuesto" %>
+15:    <% end
+  
+app/views/taxes/edit.html.erb:17: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/casthir/Documents/TEC/Lenguajes/Proyecto4/otaku-shop/app/views/taxes/edit.html.erb:17: syntax errors found
+  [2m15 | [m<% end'.freeze;
+  [2m16 | [m@output_buffer.safe_append='<!-- END app/views/taxes/edit.html.erb -->';@output_buffer
+[1;31m> [m[2m17 | [m          end
+  [2m   | [m             [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m18 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `def` statement
+):
+  
+app/views/taxes/edit.html.erb:17: syntax errors found
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:47:34 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.4ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:47:36 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/taxes/1" for 127.0.0.1 at 2025-06-30 23:47:45 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "value" => "13.0"}, "commit" => "Actualizar Impuesto", "id" => "1"}
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (1.8ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 13.0, "updated_at" = '2025-07-01 05:47:45.146915' WHERE "taxes"."id" = 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/1
+Completed 302 Found in 17ms (ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:47:45 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:47:47 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/2/edit" for 127.0.0.1 at 2025-06-30 23:47:50 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started PATCH "/taxes/2" for 127.0.0.1 at 2025-06-30 23:47:54 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Exoneracion", "value" => "0.0"}, "commit" => "Actualizar Impuesto", "id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (1.7ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 0.0, "updated_at" = '2025-07-01 05:47:54.163443' WHERE "taxes"."id" = 2 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/2
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/taxes/2" for 127.0.0.1 at 2025-06-30 23:47:54 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:47:55 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/3/edit" for 127.0.0.1 at 2025-06-30 23:47:56 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 2.8ms | GC: 1.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 1.6ms)
+Completed 200 OK in 18ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started PATCH "/taxes/3" for 127.0.0.1 at 2025-06-30 23:48:00 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Comision", "value" => "0.05"}, "commit" => "Actualizar Impuesto", "id" => "3"}
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (1.2ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 0.05, "updated_at" = '2025-07-01 05:48:00.398172' WHERE "taxes"."id" = 3 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/3
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/3" for 127.0.0.1 at 2025-06-30 23:48:00 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:48:01 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 3.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:48:35 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/taxes/1" for 127.0.0.1 at 2025-06-30 23:48:39 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "value" => "12.94"}, "commit" => "Actualizar Impuesto", "id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (0.9ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 12.94, "updated_at" = '2025-07-01 05:48:39.954972' WHERE "taxes"."id" = 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/1
+Completed 302 Found in 11ms (ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:48:39 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:48:40 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/taxes/1/edit" for 127.0.0.1 at 2025-06-30 23:48:42 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/taxes/1" for 127.0.0.1 at 2025-06-30 23:48:47 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "I.V.A", "value" => "13"}, "commit" => "Actualizar Impuesto", "id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (0.8ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 13.0, "updated_at" = '2025-07-01 05:48:47.799663' WHERE "taxes"."id" = 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/1
+Completed 302 Found in 12ms (ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/1" for 127.0.0.1 at 2025-06-30 23:48:47 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-06-30 23:48:49 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:6
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+

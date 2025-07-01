@@ -1,0 +1,13 @@
+<h1>Impuestos</h1>
+
+<%= link_to 'Agregar Impuesto', new_tax_path, class: 'agregar-impuesto-btn' %>
+
+<ul class="tax-list">
+  <% @taxes.each do |tax| %>
+    <li>
+      <span><%= tax.name %> - <%= tax.value %>%</span>
+      <span class="tax-actions">
+        <%= link_to 'Editar', edit_tax_path(tax) %>
+      </span>
+    </li>
+  <% end %>

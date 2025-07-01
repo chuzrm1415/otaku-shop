@@ -1,0 +1,15 @@
+<h1>Nuevo Impuesto</h1>
+
+<%= form_with model: @tax, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :value, "Porcentaje (%)" %>
+    <%= form.number_field :value, step: 0.01 %>
+  </div>
+
+  <%= form.submit "Guardar Impuesto" %>
+<% end %>
