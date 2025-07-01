@@ -1,3 +1,4 @@
+/* Sugerido para app/assets/stylesheets/client_index.css */
 /* Título centrado */
 h1 {
   text-align: center;
@@ -6,10 +7,10 @@ h1 {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Botón de agregar impuesto */
-.agregar-impuesto-btn {
-  display: inline-block;      /* Cambiado de block a inline-block */
-  margin: 24px 0 32px 0;      /* Alineado a la izquierda, sin auto */
+/* Botón de agregar cliente */
+.agregar-cliente-btn {
+  display: inline-block;
+  margin: 24px 0 32px 0;
   background: #6c63ff;
   color: #fff;
   padding: 12px 28px;
@@ -19,24 +20,24 @@ h1 {
   font-weight: bold;
   transition: background 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  text-align: left;           /* Opcional, texto a la izquierda */
+  text-align: left;
   border: none;
   cursor: pointer;
-  width: auto;                /* No ocupar todo el ancho */
+  width: auto;
 }
-.agregar-impuesto-btn:hover {
+.agregar-cliente-btn:hover {
   background: #5548c8;
 }
 
-/* Lista de impuestos */
-.tax-list {
+/* Lista de clientes */
+.client-list {
   max-width: 500px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
-.tax-list li {
+.client-list li {
   background: #f7f7fa;
   margin-bottom: 18px;
   padding: 18px 22px;
@@ -48,7 +49,7 @@ h1 {
 }
 
 /* Enlaces de acciones */
-.tax-actions a {
+.client-actions a {
   margin-left: 12px;
   color: #6c63ff;
   text-decoration: none;
@@ -56,6 +57,13 @@ h1 {
   transition: color 0.2s;
 }
 
-.tax-actions a:hover {
+.client-actions a:hover {
   color: #5548c8;
+}
+
+.client-actions .eliminar {
+  color: #e74c3c;
+}
+.client-actions .eliminar:hover {
+  color: #c0392b;
 }

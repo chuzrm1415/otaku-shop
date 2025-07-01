@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_30_210720) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_01_062246) do
   create_table "bill_lines", force: :cascade do |t|
     t.integer "bill"
     t.integer "product"
@@ -61,8 +61,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_30_210720) do
   end
 
   create_table "tax_products", force: :cascade do |t|
-    t.integer "product"
-    t.integer "tax"
+    t.integer "product_id"
+    t.integer "tax_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -79,6 +79,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_30_210720) do
   add_foreign_key "bills", "clients", column: "client"
   add_foreign_key "stock_histories", "move_types", column: "move_type"
   add_foreign_key "stock_histories", "products", column: "product"
-  add_foreign_key "tax_products", "products", column: "product"
-  add_foreign_key "tax_products", "taxes", column: "tax"
+  add_foreign_key "tax_products", "products"
+  add_foreign_key "tax_products", "taxes"
 end

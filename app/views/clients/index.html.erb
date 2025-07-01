@@ -1,0 +1,21 @@
+
+<h1>Clientes</h1>
+
+<%= link_to 'Agregar Cliente', new_client_path, class: 'agregar-cliente-btn' %>
+
+<ul class="client-list">
+  <% @clients.each do |client| %>
+    <li>
+      <span><%= link_to client.name, client_path(client) %></span>
+      <span class="client-actions">
+        <%= link_to 'Editar', edit_client_path(client) %>
+        |
+        <%= link_to 'Eliminar', client_path(client), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'eliminar' %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+
+<div style="text-align:center; margin-top:32px;">
+  <%= link_to 'Volver', root_path, class: 'agregar-cliente-btn' %>
+</div>

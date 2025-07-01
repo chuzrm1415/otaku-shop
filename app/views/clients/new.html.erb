@@ -1,0 +1,9 @@
+<h1>Nuevo Cliente</h1>
+
+<%= form_with model: @client, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+  <%= form.submit "Guardar Cliente" %>
+<% end %>

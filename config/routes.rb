@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :products
   resources :taxes
-
+  resources :tax_products
+  resources :clients
 end

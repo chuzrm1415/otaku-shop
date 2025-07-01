@@ -1,6 +1,7 @@
 <h1>Impuestos</h1>
 
 <%= link_to 'Agregar Impuesto', new_tax_path, class: 'agregar-impuesto-btn' %>
+<%= link_to 'Asignar Impuesto a Producto', new_tax_product_path, class: 'agregar-impuesto-btn', style: 'margin-left: 16px;' %>
 
 <ul class="tax-list">
   <% @taxes.each do |tax| %>
@@ -11,3 +12,8 @@
       </span>
     </li>
   <% end %>
+</ul>
+
+<div style="text-align:center; margin-top:32px;">
+  <%= link_to 'Volver', root_path, class: 'agregar-impuesto-btn' %>
+</div>

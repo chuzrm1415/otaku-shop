@@ -1,0 +1,13 @@
+<h1>Asignar Impuesto a Producto</h1>
+
+<%= form_with model: @tax_product, local: true do |form| %>
+  <div>
+    <%= form.label :product, "Producto" %>
+    <%= form.collection_select :product_id, @products, :id, :name %>
+  </div>
+  <div>
+    <%= form.label :tax, "Impuesto" %>
+    <%= form.collection_select :tax_id, @taxes, :id, :name %>
+  </div>
+  <%= form.submit "Asignar" %>
+<% end %>
