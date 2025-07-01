@@ -3711,3 +3711,1499 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.2ms)
 
 
+Started GET "/clients" for 127.0.0.1 at 2025-07-01 01:41:04 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by ClientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='index',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/views/clients/index.html.erb:7
+  Rendered clients/index.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 8.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/bill_index-24dd818e.css" for 127.0.0.1 at 2025-07-01 01:41:04 -0600
+Started GET "/clients/new" for 127.0.0.1 at 2025-07-01 01:41:07 -0600
+Processing by ClientsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2025-07-01 01:41:17 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "client" => {"name" => "Oscar Jimenez"}, "commit" => "Guardar Cliente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/controllers/clients_controller.rb:16:in 'ClientsController#create'
+  [1m[36mClient Create (0.7ms)[0m  [1m[32mINSERT INTO "clients" ("name", "created_at", "updated_at") VALUES ('Oscar Jimenez', '2025-07-01 07:41:17.644093', '2025-07-01 07:41:17.644093') RETURNING "id" /*action='create',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/controllers/clients_controller.rb:16:in 'ClientsController#create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/controllers/clients_controller.rb:16:in 'ClientsController#create'
+Redirected to http://localhost:3000/clients/2
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2025-07-01 01:41:17 -0600
+Processing by ClientsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/controllers/clients_controller.rb:7:in 'ClientsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2025-07-01 01:41:19 -0600
+Processing by ClientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='index',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/views/clients/index.html.erb:7
+  Rendered clients/index.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 01:41:24 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 01:41:25 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  Rendered bills/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to AddSubTotalToBillLines (20250701075201)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "bill_lines" ADD "subtotal" decimal(10,2) /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250701075201') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 01:56:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.4ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  Rendered bills/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/bill_new-1e04a986.css" for 127.0.0.1 at 2025-07-01 01:56:53 -0600
+Started GET "/" for 127.0.0.1 at 2025-07-01 01:56:54 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 01:56:56 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  Rendered bills/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/new" for 127.0.0.1 at 2025-07-01 01:56:57 -0600
+Processing by BillsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/new.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='new',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/new.html.erb:6
+  Rendered bills/new.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/new" for 127.0.0.1 at 2025-07-01 01:59:37 -0600
+Processing by BillsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/new.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='new',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/new.html.erb:6
+  Rendered bills/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/bill_show-a4880971.css" for 127.0.0.1 at 2025-07-01 01:59:37 -0600
+Started POST "/bills" for 127.0.0.1 at 2025-07-01 01:59:40 -0600
+Processing by BillsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "bill" => {"client_id" => "1", "date" => "2025-06-29"}, "commit" => "Crear Factura"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'client_id' for Bill.)
+Caused by: NoMethodError (undefined method 'client_id=' for an instance of Bill)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'client_id' for Bill.):
+  
+app/controllers/bills_controller.rb:16:in 'BillsController#create'
+
+Information for cause: NoMethodError (undefined method 'client_id=' for an instance of Bill):
+  
+app/controllers/bills_controller.rb:16:in 'BillsController#create'
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to RenameClientToClientIdInBills (20250701080210)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abills" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "client_id" integer, "date" datetime(6), "subtotal" decimal(10,2), "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "abills" ("id","client_id","date","subtotal","total","created_at","updated_at")
+                     SELECT "id","client","date","subtotal","total","created_at","updated_at" FROM "bills" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "bills" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "bills" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "client_id" integer, "date" datetime(6), "subtotal" decimal(10,2), "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b3236d6d4b"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "bills" ("id","client_id","date","subtotal","total","created_at","updated_at")
+                     SELECT "id","client_id","date","subtotal","total","created_at","updated_at" FROM "abills" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "abills" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250701080210') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Started POST "/bills" for 127.0.0.1 at 2025-07-01 02:03:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "bill" => {"client_id" => "1", "date" => "2025-06-29"}, "commit" => "Crear Factura"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mBill Create (0.1ms)[0m  [1m[32mINSERT INTO "bills" ("client_id", "date", "subtotal", "total", "created_at", "updated_at") VALUES (1, '2025-06-29 00:00:00', NULL, NULL, '2025-07-01 08:03:18.335708', '2025-07-01 08:03:18.335708') RETURNING "id" /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+Redirected to http://localhost:3000/bills/1
+Completed 302 Found in 29ms (ActiveRecord: 3.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:03:18 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.3ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  Rendered bills/show.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^)
+Caused by: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^)
+Caused by: SQLite3::SQLException (no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^)
+
+Information for: ActionView::Template::Error (SQLite3::SQLException: no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^):
+    14:     </tr>
+    15:   </thead>
+    16:   <tbody>
+    17:     <% @bill.bill_lines.each do |line| %>
+    18:       <tr>
+    19:         <td><%= line.product.name %></td>
+    20:         <td><%= line.cant %></td>
+  
+
+Information for cause: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: bill_lines.bill_id:
+SELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/
+                                              ^):
+  
+app/views/bills/show.html.erb:17
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Migrating to RenameBilltToBillIdInBillLines (20250701081220)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abill_lines" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bill_id" integer, "product" integer, "cant" integer, "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "subtotal" decimal(10,2)) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "abill_lines" ("id","bill_id","product","cant","total","created_at","updated_at","subtotal")
+                     SELECT "id","bill","product","cant","total","created_at","updated_at","subtotal" FROM "bill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "bill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "bill_lines" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bill_id" integer, "product" integer, "cant" integer, "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "subtotal" decimal(10,2), CONSTRAINT "fk_rails_04f8f4961f"
+FOREIGN KEY ("product")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_960fc93337"
+FOREIGN KEY ("bill_id")
+  REFERENCES "bills" ("id")
+) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bill_lines" ("id","bill_id","product","cant","total","created_at","updated_at","subtotal")
+                     SELECT "id","bill_id","product","cant","total","created_at","updated_at","subtotal" FROM "abill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "abill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250701081220') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+Migrating to RenameProductToProductIdInBillLines (20250701081248)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abill_lines" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bill_id" integer, "product_id" integer, "cant" integer, "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "subtotal" decimal(10,2)) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "abill_lines" ("id","bill_id","product_id","cant","total","created_at","updated_at","subtotal")
+                     SELECT "id","bill_id","product","cant","total","created_at","updated_at","subtotal" FROM "bill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "bill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "bill_lines" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bill_id" integer, "product_id" integer, "cant" integer, "total" decimal(10,2), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "subtotal" decimal(10,2), CONSTRAINT "fk_rails_960fc93337"
+FOREIGN KEY ("bill_id")
+  REFERENCES "bills" ("id")
+, CONSTRAINT "fk_rails_d323ecf61c"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+) /*application='OtakuShop'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bill_lines" ("id","bill_id","product_id","cant","total","created_at","updated_at","subtotal")
+                     SELECT "id","bill_id","product_id","cant","total","created_at","updated_at","subtotal" FROM "abill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "abill_lines" /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='OtakuShop'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250701081248') RETURNING "version" /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Started GET "/bills/new" for 127.0.0.1 at 2025-07-01 02:15:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/new.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='new',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/new.html.erb:6
+  Rendered bills/new.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/bills" for 127.0.0.1 at 2025-07-01 02:15:12 -0600
+Processing by BillsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "bill" => {"client_id" => "1", "date" => "2025-06-29"}, "commit" => "Crear Factura"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mClient Load (0.9ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mBill Create (0.1ms)[0m  [1m[32mINSERT INTO "bills" ("client_id", "date", "subtotal", "total", "created_at", "updated_at") VALUES (1, '2025-06-29 00:00:00', NULL, NULL, '2025-07-01 08:15:13.008887', '2025-07-01 08:15:13.008887') RETURNING "id" /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:17:in 'BillsController#create'
+Redirected to http://localhost:3000/bills/2
+Completed 302 Found in 16ms (ActiveRecord: 2.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/2" for 127.0.0.1 at 2025-07-01 02:15:13 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 2 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  Rendered bills/show.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:15:35 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:16:01 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  Rendered bills/show.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 5.6ms | ActiveRecord: 0.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:26:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.4ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 14.3ms | ActiveRecord: 1.0ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/bill_line_new-f7fba096.css" for 127.0.0.1 at 2025-07-01 02:26:53 -0600
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:26:55 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:26:57 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.2ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:27:00 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  Rendered bills/show.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 6.5ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1/bill_lines/new" for 127.0.0.1 at 2025-07-01 02:27:05 -0600
+Processing by BillLinesController#new as HTML
+  Parameters: {"bill_id" => "1"}
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='new',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:3:in 'BillLinesController#new'
+  Rendering layout layouts/application.html.erb
+  Rendering bill_lines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='new',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/views/bill_lines/new.html.erb:6
+  Rendered bill_lines/new.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 6.2ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/bills/1/bill_lines" for 127.0.0.1 at 2025-07-01 02:27:14 -0600
+Processing by BillLinesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "bill_line" => {"product_id" => "2", "cant" => "3"}, "commit" => "Agregar", "bill_id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:9:in 'BillLinesController#create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mBillLine Create (0.2ms)[0m  [1m[32mINSERT INTO "bill_lines" ("bill_id", "product_id", "cant", "total", "created_at", "updated_at", "subtotal") VALUES (1, 2, 3, NULL, '2025-07-01 08:27:14.593274', '2025-07-01 08:27:14.593274', 15000.0) RETURNING "id" /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+Redirected to http://localhost:3000/bills/1
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:27:14 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:19
+  Rendered bills/show.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Integer)
+Caused by: TypeError (nil can't be coerced into Integer)
+
+Information for: ActionView::Template::Error (nil can't be coerced into Integer):
+    25:   </tbody>
+    26: </table>
+    27: 
+    28: <p><strong>Subtotal:</strong> <%= number_to_currency(@bill.subtotal) %></p>
+    29: <p><strong>Total:</strong> <%= number_to_currency(@bill.total) %></p>
+    30: 
+    31: <div style="text-align:center; margin-top:32px;">
+  
+app/models/bill.rb:6:in 'Bill#subtotal'
+app/views/bills/show.html.erb:28
+
+Information for cause: TypeError (nil can't be coerced into Integer):
+  
+app/models/bill.rb:6:in 'Bill#subtotal'
+app/views/bills/show.html.erb:28
+Started POST "/bills/1/bill_lines" for 127.0.0.1 at 2025-07-01 02:28:56 -0600
+Processing by BillLinesController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "bill_line" => {"product_id" => "2", "cant" => "3"}, "commit" => "Agregar", "bill_id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:9:in 'BillLinesController#create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mBillLine Create (0.1ms)[0m  [1m[32mINSERT INTO "bill_lines" ("bill_id", "product_id", "cant", "total", "created_at", "updated_at", "subtotal") VALUES (1, 2, 3, NULL, '2025-07-01 08:28:56.944915', '2025-07-01 08:28:56.944915', 15000.0) RETURNING "id" /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='bill_lines'*/[0m
+  ↳ app/controllers/bill_lines_controller.rb:11:in 'BillLinesController#create'
+Redirected to http://localhost:3000/bills/1
+Completed 302 Found in 16ms (ActiveRecord: 2.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:28:56 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:19
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:19
+  Rendered bills/show.html.erb within layouts/application (Duration: 8.3ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 2.6ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.4ms (5 queries, 1 cached) | GC: 2.6ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:29:35 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 6.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 1.0ms)
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 0.3ms (3 queries, 1 cached) | GC: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:29:36 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:29:38 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.5ms)
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/tax_products/new" for 127.0.0.1 at 2025-07-01 02:29:40 -0600
+Processing by TaxProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tax_products/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='new',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/views/tax_products/new.html.erb:6
+  [1m[36mTax Load (0.0ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='new',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/views/tax_products/new.html.erb:10
+  Rendered tax_products/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:31:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:31:25 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 5.1ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2025-07-01 02:31:27 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:31:38 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/new" for 127.0.0.1 at 2025-07-01 02:31:40 -0600
+Processing by TaxesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/new.html.erb within layouts/application
+  Rendered taxes/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:36:12 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.5ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 8.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 9.3ms | ActiveRecord: 0.9ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:36:14 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:19
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:19
+  Rendered bills/show.html.erb within layouts/application (Duration: 13.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 13.5ms | ActiveRecord: 0.6ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:36:28 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 2.7ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 9.3ms)
+
+
+Started GET "/bills/2" for 127.0.0.1 at 2025-07-01 02:36:30 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 2 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  Rendered bills/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 0.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:36:33 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:39:52 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.2ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:39:54 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (1.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 9.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.4ms)
+Completed 200 OK in 27ms (Views: 8.7ms | ActiveRecord: 1.6ms (3 queries, 1 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:39:56 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:39:57 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/tax_products/new" for 127.0.0.1 at 2025-07-01 02:40:00 -0600
+Processing by TaxProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tax_products/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='new',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/views/tax_products/new.html.erb:6
+  [1m[36mTax Load (0.0ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='new',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/views/tax_products/new.html.erb:10
+  Rendered tax_products/new.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/tax_products" for 127.0.0.1 at 2025-07-01 02:40:05 -0600
+Processing by TaxProductsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax_product" => {"product_id" => "1", "tax_id" => "1"}, "commit" => "Asignar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/controllers/tax_products_controller.rb:10:in 'TaxProductsController#create'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/controllers/tax_products_controller.rb:10:in 'TaxProductsController#create'
+  [1m[36mTax Load (0.0ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 1 LIMIT 1 /*action='create',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/controllers/tax_products_controller.rb:10:in 'TaxProductsController#create'
+  [1m[36mTaxProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "tax_products" ("product_id", "tax_id", "created_at", "updated_at") VALUES (1, 1, '2025-07-01 08:40:05.020814', '2025-07-01 08:40:05.020814') RETURNING "id" /*action='create',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/controllers/tax_products_controller.rb:10:in 'TaxProductsController#create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='OtakuShop',controller='tax_products'*/[0m
+  ↳ app/controllers/tax_products_controller.rb:10:in 'TaxProductsController#create'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:40:05 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:40:09 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:40:11 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 0.2ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:40:13 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:19
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:19
+  Rendered bills/show.html.erb within layouts/application (Duration: 15.6ms | GC: 8.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 8.6ms)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 0.4ms (5 queries, 1 cached) | GC: 8.6ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:41:00 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.4ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:41:01 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.4ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:41:03 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes/3/edit" for 127.0.0.1 at 2025-07-01 02:41:10 -0600
+Processing by TaxesController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='edit',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:20:in 'TaxesController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/edit.html.erb within layouts/application
+  Rendered taxes/edit.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/taxes/3" for 127.0.0.1 at 2025-07-01 02:41:16 -0600
+Processing by TaxesController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "tax" => {"name" => "Comision", "value" => "5.0"}, "commit" => "Actualizar Impuesto", "id" => "3"}
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:24:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTax Update (0.8ms)[0m  [1m[33mUPDATE "taxes" SET "value" = 5.0, "updated_at" = '2025-07-01 08:41:16.113957' WHERE "taxes"."id" = 3 /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:25:in 'TaxesController#update'
+Redirected to http://localhost:3000/taxes/3
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/taxes/3" for 127.0.0.1 at 2025-07-01 02:41:16 -0600
+Processing by TaxesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" WHERE "taxes"."id" = 3 LIMIT 1 /*action='show',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/controllers/taxes_controller.rb:33:in 'TaxesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/show.html.erb within layouts/application
+  Rendered taxes/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.5ms)
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:41:17 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.2ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:41:23 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:41:24 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.2ms)
+Completed 200 OK in 14ms (Views: 5.7ms | ActiveRecord: 0.3ms (3 queries, 1 cached) | GC: 0.2ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:41:26 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:17
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:19
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:19
+  Rendered bills/show.html.erb within layouts/application (Duration: 4.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 0.4ms (5 queries, 1 cached) | GC: 0.2ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:44:00 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 10.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 1.1ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:54:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.4ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 1.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/home_index-d21ca14c.css" for 127.0.0.1 at 2025-07-01 02:54:03 -0600
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:54:05 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:54:09 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:54:23 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:54:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:54:42 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 4.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-01 02:57:00 -0600
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/home_index-3e93bd1d.css" for 127.0.0.1 at 2025-07-01 02:57:00 -0600
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:57:02 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2025-07-01 02:57:06 -0600
+Processing by ProductsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1 /*action='edit',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:31:in 'ProductsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2025-07-01 02:57:10 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:17:in 'ProductsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:57:12 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2025-07-01 02:57:13 -0600
+Processing by ProductsController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='edit',application='OtakuShop',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:31:in 'ProductsController#edit'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-01 02:57:18 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='OtakuShop',controller='products'*/[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2025-07-01 02:57:19 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/taxes" for 127.0.0.1 at 2025-07-01 02:57:24 -0600
+Processing by TaxesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering taxes/index.html.erb within layouts/application
+  [1m[36mTax Load (0.1ms)[0m  [1m[34mSELECT "taxes".* FROM "taxes" /*action='index',application='OtakuShop',controller='taxes'*/[0m
+  ↳ app/views/taxes/index.html.erb:7
+  Rendered taxes/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2025-07-01 02:57:34 -0600
+Processing by ClientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" /*action='index',application='OtakuShop',controller='clients'*/[0m
+  ↳ app/views/clients/index.html.erb:7
+  Rendered clients/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.4ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 02:57:38 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 8.9ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.9ms)
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 0.4ms (3 queries, 1 cached) | GC: 1.6ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 02:57:44 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 10.7ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.5ms)
+Completed 200 OK in 21ms (Views: 11.3ms | ActiveRecord: 0.5ms (5 queries, 1 cached) | GC: 0.5ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 03:00:11 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.4ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 6.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 0.3ms)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.9ms (3 queries, 1 cached) | GC: 0.3ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:00:12 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 0.5ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 03:00:16 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:02:43 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 0.3ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 03:03:00 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.2ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:03:07 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.2ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 6.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.4ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 0.5ms (5 queries, 1 cached) | GC: 0.4ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:05:40 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.0ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 10.8ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.6ms)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 1.2ms (5 queries, 1 cached) | GC: 0.7ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:05:41 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 5.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.3ms)
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 0.4ms (5 queries, 1 cached) | GC: 0.3ms)
+
+
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" ORDER BY "bill_lines"."id" DESC LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mBillLine Load (0.3ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" ORDER BY "bill_lines"."id" ASC LIMIT 1000 /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mTax Sum (0.0ms)[0m  [1m[34mSELECT SUM("taxes"."value") FROM "taxes" INNER JOIN "tax_products" ON "taxes"."id" = "tax_products"."tax_id" WHERE "tax_products"."product_id" = 2 /*application='OtakuShop'*/[0m
+  [1m[36mBillLine Update (0.0ms)[0m  [1m[33mUPDATE "bill_lines" SET "total" = 16950.0, "updated_at" = '2025-07-01 09:08:25.937242' WHERE "bill_lines"."id" = 1 /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*application='OtakuShop'*/[0m
+  [1m[36mTax Sum (0.0ms)[0m  [1m[34mSELECT SUM("taxes"."value") FROM "taxes" INNER JOIN "tax_products" ON "taxes"."id" = "tax_products"."tax_id" WHERE "tax_products"."product_id" = 2 /*application='OtakuShop'*/[0m
+  [1m[36mBillLine Update (0.0ms)[0m  [1m[33mUPDATE "bill_lines" SET "total" = 16950.0, "updated_at" = '2025-07-01 09:08:25.940624' WHERE "bill_lines"."id" = 2 /*application='OtakuShop'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='OtakuShop'*/[0m
+  [1m[36mBillLine Load (0.3ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" ORDER BY "bill_lines"."id" DESC LIMIT 1 /*application='OtakuShop'*/[0m
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:09:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.0ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 14.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 19.6ms | ActiveRecord: 1.4ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:10:46 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 11.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 1.1ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/1" for 127.0.0.1 at 2025-07-01 03:12:16 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='OtakuShop'*/[0m
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBill Load (0.0ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:20
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  ↳ app/views/bills/show.html.erb:20
+  Rendered bills/show.html.erb within layouts/application (Duration: 14.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 19.6ms | ActiveRecord: 1.4ms (5 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 03:12:17 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/2" for 127.0.0.1 at 2025-07-01 03:12:22 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.1ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 2 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  Rendered bills/show.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bills" for 127.0.0.1 at 2025-07-01 03:12:28 -0600
+Processing by BillsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bills/index.html.erb within layouts/application
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:6
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='index',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/index.html.erb:10
+  [1m[36mCACHE Client Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  ↳ app/views/bills/index.html.erb:10
+  Rendered bills/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 0.1ms (3 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/bills/2" for 127.0.0.1 at 2025-07-01 03:12:30 -0600
+Processing by BillsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBill Load (0.1ms)[0m  [1m[34mSELECT "bills".* FROM "bills" WHERE "bills"."id" = 2 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/controllers/bills_controller.rb:7:in 'BillsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering bills/show.html.erb within layouts/application
+  [1m[36mClient Load (0.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:3
+  [1m[36mBillLine Load (0.0ms)[0m  [1m[34mSELECT "bill_lines".* FROM "bill_lines" WHERE "bill_lines"."bill_id" = 2 /*action='show',application='OtakuShop',controller='bills'*/[0m
+  ↳ app/views/bills/show.html.erb:18
+  Rendered bills/show.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+

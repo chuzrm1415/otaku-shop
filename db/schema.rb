@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_01_062246) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_01_081248) do
   create_table "bill_lines", force: :cascade do |t|
-    t.integer "bill"
-    t.integer "product"
+    t.integer "bill_id"
+    t.integer "product_id"
     t.integer "cant"
     t.decimal "total", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "subtotal", precision: 10, scale: 2
   end
 
   create_table "bills", force: :cascade do |t|
-    t.integer "client"
+    t.integer "client_id"
     t.datetime "date"
     t.decimal "subtotal", precision: 10, scale: 2
     t.decimal "total", precision: 10, scale: 2
@@ -74,9 +75,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_01_062246) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "bill_lines", "bills", column: "bill"
-  add_foreign_key "bill_lines", "products", column: "product"
-  add_foreign_key "bills", "clients", column: "client"
+  add_foreign_key "bill_lines", "bills"
+  add_foreign_key "bill_lines", "products"
+  add_foreign_key "bills", "clients"
   add_foreign_key "stock_histories", "move_types", column: "move_type"
   add_foreign_key "stock_histories", "products", column: "product"
   add_foreign_key "tax_products", "products"

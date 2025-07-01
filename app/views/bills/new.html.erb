@@ -1,0 +1,17 @@
+<h1>Nueva Factura</h1>
+
+<%= form_with model: @bill, local: true do |form| %>
+  <div>
+    <%= form.label :client_id, "Cliente" %>
+    <%= form.collection_select :client_id, @clients, :id, :name, prompt: "Seleccione un cliente" %>
+  </div>
+  <div>
+    <%= form.label :date, "Fecha" %>
+    <%= form.date_field :date, value: Date.today %>
+  </div>
+  <%= form.submit "Crear Factura" %>
+<% end %>
+
+<div style="text-align:center; margin-top:32px;">
+  <%= link_to 'Volver', bills_path, class: 'agregar-factura-btn' %>
+</div>

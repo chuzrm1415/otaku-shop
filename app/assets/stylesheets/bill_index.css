@@ -1,0 +1,64 @@
+h1 {
+  text-align: center;
+  color: #6c63ff;
+  margin-top: 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.agregar-factura-btn {
+  display: inline-block;
+  margin: 24px 0 32px 0;
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+.agregar-factura-btn:hover {
+  background: #5548c8;
+}
+
+.bill-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.bill-list li {
+  background: #f7f7fa;
+  margin-bottom: 18px;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bill-actions a {
+  margin-left: 12px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.bill-actions a:hover {
+  color: #5548c8;
+}
+
+.bill-actions .eliminar {
+  color: #e74c3c;
+}
+.bill-actions .eliminar:hover {
+  color: #c0392b;
+}

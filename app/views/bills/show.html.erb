@@ -1,0 +1,36 @@
+<h1>Factura #<%= @bill.id %></h1>
+
+<p><strong>Cliente:</strong> <%= @bill.client&.name || "Sin cliente" %></p>
+<p><strong>Fecha:</strong> <%= @bill.date&.strftime("%d/%m/%Y") %></p>
+
+<h2>Detalle</h2>
+<table class="bill-detail-table">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+      <th>Subtotal</th>
+      <th>Total (con impuestos)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bill.bill_lines.each do |line| %>
+      <tr>
+        <td><%= line.product.name %></td>
+        <td><%= line.cant %></td>
+        <td><%= number_to_currency(line.product.price) %></td>
+        <td><%= number_to_currency(line.subtotal) %></td>
+        <td><%= number_to_currency(line.total) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><strong>Subtotal:</strong> <%= number_to_currency(@bill.subtotal) %></p>
+<p><strong>Total:</strong> <%= number_to_currency(@bill.total) %></p>
+
+<div style="text-align:center; margin-top:32px;">
+  <%= link_to 'Agregar Producto', new_bill_bill_line_path(@bill), class: 'agregar-factura-btn' %>
+  <%= link_to 'Volver a Facturas', bills_path, class: 'agregar-factura-btn', style: 'margin-left: 8px;' %>
+</div>

@@ -1,0 +1,17 @@
+<h1>Agregar Producto a Factura #<%= @bill.id %></h1>
+
+<%= form_with model: [@bill, @bill_line], local: true do |form| %>
+  <div>
+    <%= form.label :product_id, "Producto" %>
+    <%= form.collection_select :product_id, @products, :id, :name, prompt: "Seleccione un producto" %>
+  </div>
+  <div>
+    <%= form.label :cant, "Cantidad" %>
+    <%= form.number_field :cant, min: 1, value: 1 %>
+  </div>
+  <%= form.submit "Agregar" %>
+<% end %>
+
+<div style="text-align:center; margin-top:32px;">
+  <%= link_to 'Volver a Factura', bill_path(@bill), class: 'agregar-factura-btn' %>
+</div>

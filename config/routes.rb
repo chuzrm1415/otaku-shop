@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   resources :taxes
   resources :tax_products
   resources :clients
+  resources :bills do
+    resources :bill_lines, only: [:new, :create]
+  end
 end
